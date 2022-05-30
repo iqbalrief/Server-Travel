@@ -20,23 +20,30 @@ const itemSchema = new mongoose.Schema({
     },
     isPopular: {
         type: Boolean,
+        default: false
     },
     description: {
         type: String,
         required: true
     },
+    categoryId: {
+        type: ObjectId,
+        ref: 'Category'
+    },
     imageId: [{
         type: ObjectId,
         ref: 'Image'
     }],
-    featureId: [{
+    featureId: [
+        {
         type: ObjectId,
         ref: 'Feature'
     }],
-    activityId: [{
+    activityId: [
+        {
         type: ObjectId,
         ref: 'Activity'
-    }]
+    }],
 })
 
 module.exports = mongoose.model('Item', itemSchema)
