@@ -2,7 +2,7 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://localhost:27017/db_travel', {
+seeder.connect('mongodb://localhost:27017/db_staycation', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
@@ -467,7 +467,7 @@ var data = [
         payments: {
           proofPayment: 'images/bukti.jpg',
           bankFrom: 'BCA',
-          status: 'Proses',
+          status: 'Process',
           accountHolder: 'ang'
         }
       }
