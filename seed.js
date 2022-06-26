@@ -2,7 +2,7 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://localhost:27017/db_staycation', {
+seeder.connect('mongodb+srv://travel:admintravel@cluster0.tfcjy.mongodb.net/db_travel?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
@@ -465,7 +465,7 @@ var data = [
         memberId: mongoose.Types.ObjectId('5e96cbe292b97300fc903333'),
         bankId: mongoose.Types.ObjectId('5e96cbe292b97300fc903323'),
         payments: {
-          proofPayment: 'images/bukti.jpg',
+          proofPayment: 'images/buktibayar.jpeg',
           bankFrom: 'BCA',
           status: 'Process',
           accountHolder: 'ang'
@@ -503,14 +503,14 @@ var data = [
         nameBank: 'Mandiri',
         nomorRekening: '089898',
         name: 'elfin',
-        imageUrl: 'images/9999999999.png'
+        imageUrl: 'images/logo mandiri.png'
       },
       {
         _id: mongoose.Types.ObjectId('5e96cbe292b97300fc903323'),
         nameBank: 'BCA',
         nomorRekening: '878678',
         name: 'elfin',
-        imageUrl: 'images/9999999999.png'
+        imageUrl: 'images/logo bca.png'
       }
     ]
   },

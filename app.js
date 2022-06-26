@@ -9,11 +9,11 @@ const flash = require('connect-flash');
 
 //import mongoose
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/db_staycation', { 
+mongoose.connect('mongodb+srv://travel:admintravel@cluster0.tfcjy.mongodb.net/db_travel?retryWrites=true&w=majority', { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  // useCreateIndex: true,
-  // useFindAndModify: false,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 var indexRouter = require('./routes/index');
